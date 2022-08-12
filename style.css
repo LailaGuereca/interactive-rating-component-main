@@ -1,0 +1,103 @@
+/*Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/*Variables*/
+:root {
+    --primary-orange: hsl(25, 97%, 53%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-ligh-grey: hsl(217, 12%, 63%);
+    --neutral-medium-grey: hsl(216, 12%, 54%);
+    --neutral-dark-blue: hsl(213, 19%, 18%);
+    --neutral-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/*
+Font size (paragraph): 15px
+Weights: 400, 700
+Mobile: 375px
+Desktop: 1440px
+*/
+
+/*General*/
+body {
+    background-color: var(--neutral-very-dark-blue);
+    height: 100vh;
+    font-family: 'Overpass', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Card*/
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, hsl(218, 29%, 16%), hsl(216, 19%, 11%));
+    border-radius: 15px;
+}
+
+.card .star-icon svg {
+    background-color: var(--neutral-dark-blue);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.card .content {
+    color: var(--neutral-white);
+}
+
+.card .content span {
+    font-weight: 700;
+    font-size: 1.6em;
+    letter-spacing: 0.5px;
+}
+
+.card .content p {
+    color: var(--neutral-ligh-grey);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.card .rating-buttons {
+    margin-top: 10px;
+}
+
+.card .rating-buttons button {
+    background-color: var(--neutral-dark-blue);
+    color: var(--neutral-medium-grey);
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*Mobile*/
+@media (min-width: 375px) and (max-width: 768px) {
+    .card {
+        margin: 30px;
+        padding: 30px;
+    }
+
+    .card .content {
+        margin-top: 20px;
+    }
+
+    .card .content p {
+        width: 300px;
+    }
+}
